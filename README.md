@@ -10,12 +10,13 @@ The image url and position of the image can be configured inside the app as foll
 ```
 "staticimage": {
   "ImageController": {
-    "imageUrl": "http://conterra.de/img/download/conterra_Logo_RGB_150dpi_3,15cm.jpg",
+    "imageUrl": "http://www.conterra.de/~/media/conterra/images/download/conterralogorgb300dpi425cm.ashx",
     "position": {
-      "left": 100,
-      "top": 100
+      "left": "100",
+      "top": "100",
+      "unit": "pixels"
     },
-    "closeableOnClick": false
+    "closeableOnClick": true
   }
-},
+}
 ```
