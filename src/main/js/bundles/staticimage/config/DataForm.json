@@ -1,0 +1,76 @@
+{
+    "dataform-version": "1.0.0",
+    "size": {
+        "h": 300,
+        "w": 500
+    },
+    "type": "gridpanel",
+    "showLabels": true,
+    "cols": 1,
+    "children": [
+        {
+            "type": "textbox",
+            "field": "imageUrl",
+            "title": "Image URL:",
+            "tooltip": "Please enter the URL of the image you want to display",
+            "required": true,
+            "size": {
+                "l": 5,
+                "t": 5,
+                "w": 550
+            }
+        },
+        {
+            "type": "selectbox",
+            "field": "position.unit",
+            "title": "Please define the unit fpr positioning the image:",
+            "tooltip": "Should the following values be used as pixels or percent?",
+            "values": [
+                {
+                    "name": "Pixels",
+                    "value": "pixels"
+                },
+                {
+                    "name": "Percent",
+                    "value": "percent"
+                }
+            ],
+            "required": true
+        },
+        {
+            "type": "numberspinner",
+            "field": "position.left",
+            "title": "Position left in pixels (px) or relative (%):",
+            "tooltip": "Absolute position from left in pixel",
+            "required": true,
+            "size": {
+                "l": 5,
+                "t": 5,
+                "w": 100
+            },
+            "inc": 5
+        },
+        {
+            "type": "numberspinner",
+            "field": "position.top",
+            "title": "Position top in pixels (px) or relative (%):",
+            "tooltip": "Absolute position from top in pixel",
+            "required": true,
+            "size": {
+                "l": 5,
+                "t": 5,
+                "w": 100
+            },
+            "inc": 5
+        },
+        {
+            "type": "checkbox",
+            "field": "closeableOnClick",
+            "title": "Remove image on click",
+            "size": {
+                "l": 5,
+                "t": 5
+            }
+        }
+    ]
+}

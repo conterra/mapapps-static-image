@@ -1,0 +1,42 @@
+{
+    "Bundle-SymbolicName": "staticimage",
+    "Bundle-Version": "1.0",
+    "Bundle-Name": "Static Image",
+    "Bundle-Description": "Display static image over map-element",
+    "Bundle-Vendor": "con terra GmbH",
+    "Config-Bundle-Location": "/config",
+    "Bundle-Localization": [],
+    "Require-Bundle": [{
+            "name": "map",
+            "version": "^3.1.0"
+        }],
+    "CSS-Themes-Extension": [{
+            "name": "*",
+            "files": ["./templates/staticimage.css"]
+        }],
+    "Components": [
+        {
+            "name": "ImageController",
+            "propertiesConstructor": true,
+            "properties": {
+                "imageUrl": "",
+                "position": {
+                    "left": "100",
+                    "top": "100",
+                    "unit": "pixels"
+                },
+                "closeableOnClick": true
+            },
+            "references": [
+                {
+                    "name": "_windowManager",
+                    "providing": "ct.framework.api.WindowManager"
+                }
+            ]
+        },
+        {
+            "name": "ImageWidget",
+            "provides": ["overlayImage.ImageWidget"]
+        }
+    ]
+}

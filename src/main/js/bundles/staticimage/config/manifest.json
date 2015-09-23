@@ -1,0 +1,64 @@
+{
+    "Bundle-SymbolicName": "advertisement-config",
+    "Bundle-Version": "1.0",
+
+    "Bundle-Name": "Configuration Advertisement",
+    "Bundle-Description": "Configuration tab for the advertisement bundle",
+    "Bundle-Vendor": "con terra GmbH",
+    "Bundle-Localization": [],
+    
+    "Require-Bundle": [{
+        "name": "dataform",
+        "version": "[3.1.1,)",
+        "policy" : "optional"
+    },{
+        "name": "wizard",
+        "version": "[3.1.1,)"
+    }],
+
+    "Components": [
+    {
+        "name": "BuilderEntry",
+        "impl": "ct/Stateful",
+        "provides": ["wizard.MenuEntry"],
+        "propertiesConstructor": true,
+        "properties": {
+            "parentNodeId": "appBuilderWidgetsNode",
+            "menuNode": {
+                "title": "Advertisement",
+                "widget": "advertisementBuilderWidget"
+            }
+        }
+    },
+
+    {
+        "name": "BuilderWidget",
+        "impl": "wizard/DataFormBuilderWidgetFactory",
+        "provides": ["dijit.wizard.Widget"],
+        "immediate": true,
+        "instanceFactory": true,
+        "properties": {
+            "dataformFile": "resource('./DataForm.json')",
+            "bid": "advertisement",
+            "pid": "advertisement-ImageController",
+            "id": "advertisementBuilderWidget",
+            "defaultProperties": {
+                "imageUrl" : "resource('advertisement:images/ad_mapappsdays.jpg')",
+                "position": {
+                    "left": "150",
+                    "top": "130",
+                    "unit": "pixels"
+                },
+                "closeableOnClick": true
+            },
+            "description": "Settings for the advertisement bundle"
+        },
+        "references": [{
+            "name": "_configAdminService",
+            "providing": "ct.framework.api.ConfigurationAdmin"
+        },{
+            "name": "_dataformService",
+            "providing": "dataform.DataFormService"
+        }]
+    }]
+}
