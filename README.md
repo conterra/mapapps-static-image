@@ -1,8 +1,7 @@
+**This bundle will no longer be maintained and removed in the future, as the map.apps core bundle "banner" can be used to place a static image in an app.**
+
 # Static Image Bundle
 The Static Image bundle allows you to simply place an image (e.g. a logo or an image containing some copyright information) on top of the map area.
-
-### Sample App ###
-http://www.mapapps.de/mapapps/resources/apps/staticimage/index.html
 
 ## Configuration ##
 The image url and position of the image can be configured inside the app as follows:
