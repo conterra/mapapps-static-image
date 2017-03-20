@@ -1,6 +1,6 @@
 {
     "Bundle-SymbolicName": "advertisement-config",
-    "Bundle-Version": "1.0",
+    "Bundle-Version": "1.0.1-SNAPSHOT",
 
     "Bundle-Name": "Configuration Advertisement",
     "Bundle-Description": "Configuration tab for the advertisement bundle",
